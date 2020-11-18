@@ -1,0 +1,1 @@
+cmd_/home/yesh/DeviceDrivers/ModuleParameters/modparam.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/yesh/DeviceDrivers/ModuleParameters/modparam.ko /home/yesh/DeviceDrivers/ModuleParameters/modparam.o /home/yesh/DeviceDrivers/ModuleParameters/modparam.mod.o;  true
