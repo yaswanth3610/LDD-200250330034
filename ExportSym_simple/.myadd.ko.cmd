@@ -1,0 +1,1 @@
+cmd_/home/yesh/DeviceDrivers/ExportSym_simple/myadd.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/yesh/DeviceDrivers/ExportSym_simple/myadd.ko /home/yesh/DeviceDrivers/ExportSym_simple/myadd.o /home/yesh/DeviceDrivers/ExportSym_simple/myadd.mod.o;  true

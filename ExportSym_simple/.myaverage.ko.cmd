@@ -1,0 +1,1 @@
+cmd_/home/yesh/DeviceDrivers/ExportSym_simple/myaverage.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/yesh/DeviceDrivers/ExportSym_simple/myaverage.ko /home/yesh/DeviceDrivers/ExportSym_simple/myaverage.o /home/yesh/DeviceDrivers/ExportSym_simple/myaverage.mod.o;  true
