@@ -1,0 +1,1 @@
+cmd_/home/yesh/DeviceDrivers/ExportSym_Order/Average.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/yesh/DeviceDrivers/ExportSym_Order/Average.ko /home/yesh/DeviceDrivers/ExportSym_Order/Average.o /home/yesh/DeviceDrivers/ExportSym_Order/Average.mod.o;  true
