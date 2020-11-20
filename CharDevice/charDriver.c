@@ -21,9 +21,23 @@ static int simple_close(struct inode *inodep,struct file *filep)
         return 0;
 }
 
+static ssize_t simple_read(struct file *filep,char __user *ubuff,size_t cnt,loff_t *offset)
+{
+	printk("simple read method\n");
+	return 0;
+}
+
+static ssize_t simple_write(struct file *filep,const char __user *ubuff,size_t cnt,loff_t *offset)
+{
+        printk("simple write method\n");
+        return 0;
+}
+
 struct file_operations fops={
         .open    = simple_open,
         .release = simple_close,
+	.read = simple_read,
+	.write = simple_write,
 };
 
 static int __init chardev_init(void)
