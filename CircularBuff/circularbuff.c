@@ -29,8 +29,7 @@ static int simple_close(struct inode *inodep,struct file *filep)
 
 static ssize_t simple_read(struct file *filep,char __user *ubuff,size_t cnt,loff_t *offset)
 {
-	int ret,i;
-	int mini;
+	int ret,i,mini;
 
 	mini = min (cnt,(size_t)CIRC_CNT(cbuf.head,cbuf.tail,SIZE));
 
@@ -51,9 +50,12 @@ static ssize_t simple_read(struct file *filep,char __user *ubuff,size_t cnt,loff
 
 static ssize_t simple_write(struct file *filep,const char __user * ubuff,size_t cnt,loff_t *offset)
 {
-	int i,ret;
+	int i,ret,mini;
+
+	mini = max (cnt,(size_t)CIRC_CNT(cbuf.head,cbuf.tail,SIZE));
+
         printk("userspace size %d\n",(int)cnt);
-	for(i=0;i<cnt;i++)
+	for(i=0;i<mini;i++)
 	{
 		ret=copy_from_user(cbuf.buf+cbuf.head,ubuff+i,1);
 		if(ret)

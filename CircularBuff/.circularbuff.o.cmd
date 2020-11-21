@@ -863,6 +863,7 @@ deps_/home/yesh/DeviceDrivers/CircularBuff/circularbuff.o := \
     $(wildcard include/config/devtmpfs.h) \
     $(wildcard include/config/sysfs/deprecated.h) \
   include/linux/ioport.h \
+    $(wildcard include/config/io/strict/devmem.h) \
   include/linux/klist.h \
   include/linux/pm.h \
     $(wildcard include/config/vt/console/sleep.h) \
