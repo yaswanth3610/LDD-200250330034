@@ -52,13 +52,14 @@ static ssize_t simple_read(struct file *filep,char __user *ubuff,size_t cnt,loff
 		printk("copied %c to user\n",ubuff[i]);
 		cbuf.tail=(cbuf.tail+1) & (SIZE-1);
 	}
+	wake_up(&_wqw);
 	return i;
 }
 
 static ssize_t simple_write(struct file *filep,const char __user * ubuff,size_t cnt,loff_t *offset)
 {
 	int i,ret,mini;
-//	wait_event_interruptible(_wqw,CIRC_CNT(cbuf.head,cbuf.tail,SIZE)>0);
+	wait_event_interruptible(_wqw,CIRC_CNT(cbuf.head,cbuf.tail,SIZE)<(int)cnt);
 	mini = max (cnt,(size_t)CIRC_CNT(cbuf.head,cbuf.tail,SIZE));
 
         printk("userspace size %d\n",(int)cnt);
