@@ -52,7 +52,7 @@ static ssize_t simple_write(struct file *filep,const char __user * ubuff,size_t 
 {
 	int i,ret,mini;
 
-	mini = max (cnt,(size_t)CIRC_CNT(cbuf.head,cbuf.tail,SIZE));
+	mini = max (cnt,(size_t)CIRC_CNT(cbuf.head,cbuf.tail,SIZE));//Assignment part
 
         printk("userspace size %d\n",(int)cnt);
 	for(i=0;i<mini;i++)
