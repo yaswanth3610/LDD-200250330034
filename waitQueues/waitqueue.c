@@ -49,7 +49,7 @@ static ssize_t simple_read(struct file *filep,char __user *ubuff,size_t cnt,loff
 			printk("error copied to user \n");
 			return -EFAULT;
 		}
-		printk("copied %c to user\n",ubuff[i]);
+		printk("copied %c to user\n",cbuf.buf[cbuf.tai]);
 		cbuf.tail=(cbuf.tail+1) & (SIZE-1);
 	}
 	wake_up(&_wqw);

@@ -1,0 +1,1 @@
+cmd_/home/yesh/DeviceDrivers/multiDevices/multidevices.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/yesh/DeviceDrivers/multiDevices/multidevices.ko /home/yesh/DeviceDrivers/multiDevices/multidevices.o /home/yesh/DeviceDrivers/multiDevices/multidevices.mod.o;  true
