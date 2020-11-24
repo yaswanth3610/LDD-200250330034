@@ -60,7 +60,7 @@ static ssize_t simple_read(struct file *filep,char __user *ubuff,size_t cnt,loff
 static ssize_t simple_write(struct file *filep,const char __user * ubuff,size_t cnt,loff_t *offset)
 {
 	int i,ret,mini;
-	wait_event_interruptible(_wqw,CIRC_CNT(cbuf.head,cbuf.tail,SIZE)<(int)cnt);
+	wait_event_interruptible(_wqw,CIRC_CNT(cbuf.head,cbuf.tail,SIZE)<(int)cnt);//Assignment part
 	mini = max (cnt,(size_t)CIRC_CNT(cbuf.head,cbuf.tail,SIZE));
 
         printk("userspace size %d\n",(int)cnt);
