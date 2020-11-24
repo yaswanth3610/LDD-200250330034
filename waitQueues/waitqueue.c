@@ -10,6 +10,7 @@
 #define SIZE 32
 
 MODULE_LICENSE("GPL");
+MODULE_AUTHOR("Yesh");
 
 static dev_t devnum; //device number
 
@@ -49,7 +50,7 @@ static ssize_t simple_read(struct file *filep,char __user *ubuff,size_t cnt,loff
 			printk("error copied to user \n");
 			return -EFAULT;
 		}
-		printk("copied %c to user\n",cbuf.buf[cbuf.tai]);
+		printk("copied %c to user\n",cbuf.buf[cbuf.tail]);
 		cbuf.tail=(cbuf.tail+1) & (SIZE-1);
 	}
 	wake_up(&_wqw);
