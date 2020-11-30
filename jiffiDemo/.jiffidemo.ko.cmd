@@ -1,0 +1,1 @@
+cmd_/home/yesh/DeviceDrivers/jiffiDemo/jiffidemo.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/yesh/DeviceDrivers/jiffiDemo/jiffidemo.ko /home/yesh/DeviceDrivers/jiffiDemo/jiffidemo.o /home/yesh/DeviceDrivers/jiffiDemo/jiffidemo.mod.o;  true
