@@ -1,0 +1,1 @@
+cmd_/home/yesh/DeviceDrivers/tasklet/tasklet.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/yesh/DeviceDrivers/tasklet/tasklet.ko /home/yesh/DeviceDrivers/tasklet/tasklet.o /home/yesh/DeviceDrivers/tasklet/tasklet.mod.o;  true
