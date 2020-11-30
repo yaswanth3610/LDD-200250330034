@@ -1,0 +1,1 @@
+cmd_/home/yesh/DeviceDrivers/workqueues/workqueuedemo.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/yesh/DeviceDrivers/workqueues/workqueuedemo.ko /home/yesh/DeviceDrivers/workqueues/workqueuedemo.o /home/yesh/DeviceDrivers/workqueues/workqueuedemo.mod.o;  true
