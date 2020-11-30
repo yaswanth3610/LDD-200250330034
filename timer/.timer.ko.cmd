@@ -1,0 +1,1 @@
+cmd_/home/yesh/DeviceDrivers/timer/timer.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /home/yesh/DeviceDrivers/timer/timer.ko /home/yesh/DeviceDrivers/timer/timer.o /home/yesh/DeviceDrivers/timer/timer.mod.o;  true
